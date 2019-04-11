@@ -1,4 +1,12 @@
-.page-main__title {
-  .font-text(36px, 36px);
-  font-weight: 400;
+.page-header__container {
+  display: flex;
+  flex-direction: column;
+  // .container-min();
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__container {
+  flex-direction: row;
+  }
+
 }

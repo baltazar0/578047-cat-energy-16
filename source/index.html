@@ -5,28 +5,33 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
+
 <body>
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header___logo-image" src="https://echo.htmlacademy.ru" alt="Логотип магазина «Кэт энерджи»">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="program.html">Подбор программы</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="page-header__container">
+      <a class="page-header__logo">
+        <img class="page-header___logo-image" src="img/logo-mobile.svg" width="300" height="59"
+          alt="Логотип магазина «Кэт энерджи»">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="program.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="page-main">
     <!-- <h1 class="visually-hidden">Магазин функционального питания для котов</h1> -->
@@ -77,31 +82,36 @@
     </section>
     <section class="example">
       <h2 class="example__title">Живой пример</h2>
-      <p class="example__text">
-        Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-        изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-      </p>
-      <ul class="example__stats">
-        <li class="example__stats-item">
-          <span class="example__result">5 кг</span>
-          <span class="example__label">снижение веса</span>
-        </li>
-        <li class="example__stats-item">
-          <span class="example__result">60 дней</span>
-          <span class="example__label">затрачено времени</span>
-        </li>
-      </ul>
-      <p class="example__cost">Затраты на питание: 15 000 руб.</p>
-      <div class="example__slider slider">
-        <div class="slider__image-wrapper">
-          <img class="slider__image" src="https://echo.htmlacademy.ru" alt="Кот">
+      <div class="example__wrapper">
+        <p class="example__text">
+          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
+          изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+        </p>
+        <div class="example__stats-wrapper">
+          <ul class="example__stats">
+            <li class="example__stats-item">
+              <span class="example__result">5 кг</span>
+              <span class="example__label">снижение веса</span>
+            </li>
+            <li class="example__stats-item">
+              <span class="example__result">60 дней</span>
+              <span class="example__label">затрачено времени</span>
+            </li>
+          </ul>
+          <p class="example__cost">Затраты на питание: 15 000 руб.</p>
         </div>
-        <div class="slider__range">
-          <button class="slider__toggle slider__toggle--before" type="button">Было</button>
-          <div class="slider__scale">
-            <div class="slider__bar"></div>
+
+        <div class="example__slider slider">
+          <div class="slider__image-wrapper">
+            <img class="slider__image" src="https://echo.htmlacademy.ru" alt="Кот">
           </div>
-          <button class="slider__toggle slider__toggle--after" type="button">Стало</button>
+          <div class="slider__range">
+            <button class="slider__toggle slider__toggle--before" type="button">Было</button>
+            <div class="slider__scale">
+              <div class="slider__bar"></div>
+            </div>
+            <button class="slider__toggle slider__toggle--after" type="button">Стало</button>
+          </div>
         </div>
       </div>
     </section>
@@ -141,7 +151,7 @@
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="copyright__logo-img" src="https://echo.htmlacademy.ru" alt="Логотип HTML-академии"></a>
       </div>
-      </div>
+    </div>
   </footer>
 </body>
 

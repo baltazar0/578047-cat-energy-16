@@ -1,16 +1,40 @@
 .select-program {
   background-color: @bgc-btn;
-  color: #ffffff;
 
+  color: @white;
+}
+
+.select-program__title {
+  .font-text(36px, 36px);
+  font-weight: 400;
   text-transform: none;
 }
 
 .select-program__text {
   .font-text(14px, 14px);
-  text-transform: uppercase;
 }
 
-.select-program__button {
-  .font-text(14px, 14px);
-  text-transform: uppercase;
+
+@media (min-width: @tablet-width) {
+.select-catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.select-catalog__item {
+  width: 570px;
+}
+
+  .select-program {
+    background-color: @white;
+    color: @base-color;
+  }
+
+  .select-program__title {
+    .font-text(60px, 60px);
+  }
+
+  .select-program__text {
+    .font-text(20px, 20px);
+  }
+
 }

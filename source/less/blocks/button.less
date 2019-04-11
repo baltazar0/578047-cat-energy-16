@@ -3,8 +3,15 @@
   padding: 10px;
 
   background-color: @bgc-btn;
-  // font-family: @font-family-title;
+  .font-text(14px, 18px);
   color: #ffffff;
   // font-weight: 400;
   // text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    .font-text(20px, 20px);
+  }
 }

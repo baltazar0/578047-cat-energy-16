@@ -36,3 +36,63 @@
 .example__cost {
   .font-text(14px, 20px);
 }
+
+@media (min-width: @tablet-width) {
+
+  .example {
+    background-color: @white;
+  }
+
+  .example__title {
+    .font-text(60px, 60px);
+  }
+
+
+  .example__text {
+    .font-text(16px, 24px);
+  }
+
+
+  .example__stats-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  .example__result {
+    .font-text(30px, 37px);
+  }
+
+  .example__label {
+    .font-text(14px, 14px);
+  }
+
+  .example__cost {
+    .font-text(20px, 20px);
+  }
+  .example__slider {
+    background-color: @bgc-block;
+
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+.example__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: @bgc-block;
+}
+
+.example__text {
+   width: 570px;
+}
+
+.example__stats-wrapper {
+  width: 570px;
+  order: 1;
+}
+.example__slider {
+  width: 570px;
+}
+}

@@ -10,3 +10,22 @@
   .font-text(20px, 20px);
   font-weight: 500;
 }
+
+@media (min-width: @tablet-width) {
+  .main-nav__link {
+
+    .font-text(18px, 25px);
+    font-weight: 400;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    background-color: @bgc-btn;
+  }
+  .main-nav__link {
+
+    .font-text(20px, 25px);
+    color: @white;
+  }
+}

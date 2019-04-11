@@ -15,3 +15,19 @@
   color: @text-color;
   text-transform: none;
 }
+
+@media (min-width: @tablet-width) {
+  .features__title {
+    .font-text(60px, 60px);
+  }
+
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .features__item {
+    width: 245px;
+    .font-text(16px, 24px);
+  }
+}

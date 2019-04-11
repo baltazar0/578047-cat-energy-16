@@ -1,3 +1,8 @@
+.cooperate__text-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .cooperate__title {
   .font-text(16px, 20px);
   font-weight: 400;
@@ -8,4 +13,21 @@
   .font-text(14px, 20px);
   color: @text-color;
   text-transform: none;
+}
+
+@media (min-width: @tablet-width) {
+
+.cooperate__title {
+  .font-text(20px, 25px);
+}
+
+.cooperate__contact {
+  .font-text(16px, 20px);
+}
+}
+
+@media (min-width: @desktop-width) {
+.cooperate__text-wrapper {
+  width: 570px;
+}
 }
