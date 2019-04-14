@@ -6,20 +6,24 @@
 }
 
 .container-min() {
-  min-width: 280px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box;
 }
+
+.container-tablet() {
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.container-desktop() {
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 1220px;
+}
+
+
 
 .font-text(@size: 14px, @height: 18px) {
   font-size: @size;
   line-height: @height;
-}
-
-.container-min() {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 30px;
-  box-sizing: border-box;
 }

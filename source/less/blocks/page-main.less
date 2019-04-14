@@ -1,4 +1,23 @@
-.page-main__title {
-  .font-text(36px, 36px);
-  font-weight: 400;
+.page-main__container {
+
+  .container-min();
+}
+
+// .page-main__title {
+//   .font-text(36px, 36px);
+//   font-weight: 400;
+// }
+
+@media (min-width: @tablet-width) {
+  .page-main__container {
+
+    .container-tablet();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__container {
+    position: relative;
+    .container-desktop();
+  }
 }

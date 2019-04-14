@@ -1,40 +1,137 @@
 .select-program {
-  background-color: @bgc-btn;
+  position: relative;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 305px;
+
+    bottom: 35px;
+    left: 50%;
+    margin-left: -160px;
+    background-image: url(../img/index-can-mobile@1x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.select-program__wrapper {
+  min-height: 305px;
+  padding-top: 25px;
+  margin-bottom: 135px;
 
   color: @white;
+
+  background-color: @bgc-btn;
+  background-image: url(../img/index-background-mobile@1x.jpg);
+  background-position: center;
+  // background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.select-program__container {
+  .container-min();
 }
 
 .select-program__title {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+
   .font-text(36px, 36px);
   font-weight: 400;
+  text-align: center;
   text-transform: none;
 }
 
 .select-program__text {
   .font-text(14px, 14px);
+  text-align: center;
 }
 
+// .select-program__button {
+
+// }
 
 @media (min-width: @tablet-width) {
-.select-catalog__list {
-  display: flex;
-  flex-wrap: wrap;
-}
-.select-catalog__item {
-  width: 570px;
-}
+
 
   .select-program {
-    background-color: @white;
+    min-height: 850px;
+
+    &::before {
+      content: none;
+    }
+
+    background-image: url(../img/index-can-tablet@1x.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+
+  }
+
+  .select-program__wrapper {
+    min-height: 0;
+    padding-top: 50px;
+    margin-bottom: 45px;
+
     color: @base-color;
+
+    background-color: @white;
+    background-image: none;
+
+  }
+
+  .select-program__container {
+    .container-tablet();
   }
 
   .select-program__title {
+    width: 430px;
+    margin-left: 90px;
+    margin-bottom: 40px;
     .font-text(60px, 60px);
+    text-align: left;
   }
 
   .select-program__text {
+    margin-left: 90px;
     .font-text(20px, 20px);
+    text-align: left;
   }
+
+  .select-program__button {
+    width: 245px;
+    margin-left: 90px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .select-program {
+    position: absolute;
+    width: 570px;
+    top: 100px;
+    left: 50%;
+    margin-left: -600px;
+    background-image: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 552px;
+      height: 499px;
+
+      top: 0;
+      left: 106%;
+      background-image: url(../img/index-can-desktop@1x.png);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+
 
 }
