@@ -1,19 +1,36 @@
 .cooperate__text-wrapper {
   display: flex;
   justify-content: space-between;
+  .container-min();
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .cooperate__title {
+  width: 140px;
   .font-text(16px, 20px);
   font-weight: 400;
 }
 
 .cooperate__contact {
+  width: 140px;
   font-family: @font-family-text;
   .font-text(14px, 20px);
   color: @text-color;
   text-transform: none;
 }
+
+// .cooperate__map-wrapper {
+//   text-align: center;
+// }
+
+.cooperate__map {
+  display: block;
+  margin: 0 auto;
+  width: 320px;
+  height: 400px;
+}
+
 
 @media (min-width: @tablet-width) {
 
