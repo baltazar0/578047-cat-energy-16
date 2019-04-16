@@ -3,14 +3,30 @@
   .container-min();
 }
 
-// .page-main__title {
-//   .font-text(36px, 36px);
-//   font-weight: 400;
-// }
+.page-main__inner-wrapper {
+  border-bottom: 1px solid #e6e6e6;
+}
+.page-main__inner-title {
+  .container-min();
+  padding-top: 30px;
+  padding-bottom: 35px;
+  .font-text(36px, 36px);
+  font-weight: 400;
+  text-transform: none;
+}
+
+.page-main__inner-h2 {
+  .container-min();
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .font-text(24px, 24px);
+  font-weight: 400;
+  text-transform: none;
+  border-bottom: 1px solid #e6e6e6;
+}
 
 @media (min-width: @tablet-width) {
   .page-main__container {
-
     .container-tablet();
   }
 }
