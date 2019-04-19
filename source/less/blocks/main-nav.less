@@ -54,7 +54,6 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-
   &::before,
   &::after {
     content: "";
@@ -117,8 +116,7 @@
     border-bottom: none;
 
     &:not(:nth-child(3)) {
-
-    margin-right: 30px;
+      margin-right: 30px;
     }
   }
 
@@ -138,12 +136,15 @@
     margin-left: 130px;
   }
 
-
   .main-nav__link {
-
     .font-text(20px, 25px);
     color: @white;
+
+
+    &--inner {
+      color: @base-color;
+    }
   }
 
-}
 
+}

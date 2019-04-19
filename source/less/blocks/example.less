@@ -1,6 +1,7 @@
 .example {
   background-color: @bgc-block;
 }
+
 .example__wrapper-mobil {
   .container-min();
   padding-top: 30px;
@@ -71,7 +72,7 @@
   text-transform: none;
   text-align: center;
 
-  background-color:  @bgc-block;
+  background-color: @bgc-block;
 }
 
 .example__cost {
@@ -80,12 +81,10 @@
 }
 
 @media (min-width: @tablet-width) {
-
   .example {
     padding-top: 50px;
     background-color: @white;
     border-top: 1px solid @bgc-underline;
-
   }
 
   .example__wrapper-mobil {
@@ -147,7 +146,7 @@
     bottom: -12px;
     .font-text(14px, 14px);
 
-    background-color:  @white;
+    background-color: @white;
   }
 
   .example__cost {
@@ -158,16 +157,13 @@
 
   .example__slider {
     background-color: @bgc-block;
-
   }
-
 }
 
 @media (min-width: @desktop-width) {
   .example {
     position: relative;
     border-top: none;
-
   }
 
 
@@ -177,47 +173,49 @@
     width: auto;
   }
 
-.example__wrapper-desktop {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 75px;
-  padding-bottom: 75px;
-  background-color: @bgc-block;
-}
+  .example__wrapper-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: @bgc-block;
+  }
 
-.example__title {
-  .container-desktop();
-  margin-bottom: 75px;
-}
+  .example__title {
+    .container-desktop();
+    margin-bottom: 75px;
+  }
 
-.example__container-desktop {
-  .container-desktop();
-}
-.example__text {
-   width: 435px;
-}
+  .example__container-desktop {
+    .container-desktop();
+  }
 
-.example__stats-wrapper {
-  width: 570px;
-  flex-direction: column;
+  .example__text {
+    width: 435px;
+  }
 
-  // order: 1;
-}
-.example__stats {
-  justify-content: flex-start;
-}
+  .example__stats-wrapper {
+    width: 570px;
+    flex-direction: column;
 
-.example__cost {
-  width: 570px;
-  text-align: left;
-}
+    // order: 1;
+  }
 
-.example__cost span {
-  margin-left: 40px;
-}
+  .example__stats {
+    justify-content: flex-start;
+  }
 
-.example__label {
+  .example__cost {
+    width: 570px;
+    text-align: left;
+  }
 
-  background-color: @bgc-block;
-}
+  .example__cost span {
+    margin-left: 40px;
+  }
+
+  .example__label {
+
+    background-color: @bgc-block;
+  }
 }

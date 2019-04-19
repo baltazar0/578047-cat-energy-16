@@ -42,6 +42,10 @@
   .page-header {
     min-height: 696px;
     margin-bottom: 80px;
+
+    &--inner {
+      min-height: 50px;
+    }
   }
 
   .page-header__container {
@@ -65,11 +69,17 @@
     background-position: center;
     // background-repeat: no-repeat;
     background-size: cover;
+
+    &--inner {
+      background-image: none;
+      height: 50px;
+    }
   }
 
-.page-header__logo {
-  margin-right: 405px;
-}
+
+  .page-header__logo {
+    margin-right: 405px;
+  }
 
   .page-header__logo-image {
     width: 205px;
