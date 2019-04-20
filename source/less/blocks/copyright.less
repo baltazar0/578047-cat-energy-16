@@ -1,3 +1,11 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .copyright__link {
   font-family: @font-family-text;
   .font-text(16px, 16px);
@@ -8,4 +16,23 @@
 .copyright__logo {
   color: inherit;
   text-transform: none;
+}
+
+.copyright__logo svg {
+  width: 60px;
+  height: 60px;
+  fill: #2e368f;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    width: 160px;
+    padding: 0;
+  }
+
+  .copyright__logo svg {
+    width: 27px;
+    height: 34px;
+    fill: #2e368f;
+  }
 }

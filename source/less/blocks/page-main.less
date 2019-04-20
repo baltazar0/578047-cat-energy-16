@@ -1,4 +1,138 @@
-.page-main__title {
+.page-main__container {
+  .container-min();
+}
+
+.page-main__inner-title {
+  .container-min();
+  padding-top: 30px;
+  padding-bottom: 35px;
   .font-text(36px, 36px);
   font-weight: 400;
+  text-transform: none;
+}
+
+.page-main__inner-h2-wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 3px;
+    background-color: @bgc-btn;
+    top: 44px;
+    left: 50%;
+  }
+}
+
+.page-main__title-wrapper {
+  display: flex;
+  .container-min();
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.page-main__inner-h2 {
+  margin: 0;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  .font-text(24px, 24px);
+  font-weight: 400;
+  text-transform: none;
+  background-color: @white;
+  z-index: 5;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__container {
+    .container-tablet();
+  }
+
+  .page-main__inner-wrapper {
+    border-bottom: none;
+    margin-bottom: 140px;
+
+    &--form {
+      margin-bottom: 40px;
+    }
+  }
+
+  .page-main__inner-title {
+    .container-tablet();
+    padding-top: 30px;
+    padding-bottom: 35px;
+    .font-text(60px, 60px);
+  }
+
+  .page-main__inner-h2-wrapper {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: @bgc-btn;
+      top: 44px;
+      left: 0;
+    }
+  }
+
+  .page-main__title-wrapper {
+    display: flex;
+    .container-tablet();
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .page-main__inner-h2 {
+    margin: 0;
+    padding-bottom: 30px;
+    padding-right: 35px;
+    padding-left: 35px;
+    .font-text(36px, 36px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__container {
+    position: relative;
+    .container-desktop();
+  }
+
+  .page-main__inner-title {
+    width: 1300px;
+    padding: 0;
+  }
+
+  .page-main__inner-h2-wrapper {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: @bgc-btn;
+      top: 44px;
+      left: 0;
+    }
+  }
+
+  .page-main__title-wrapper {
+    display: flex;
+    flex-direction: flex-start;
+    width: 1300px;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .page-main__inner-h2 {
+    margin: 0;
+    padding-bottom: 30px;
+    padding-right: 35px;
+    padding-left: 35px;
+    .font-text(36px, 36px);
+  }
 }
