@@ -27,9 +27,7 @@
   background-color: @bgc-btn;
   background-image: url(../img/index-background-mobile@1x.jpg);
   background-position: center;
-  // background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .select-program__container {
@@ -52,25 +50,16 @@
   text-align: center;
 }
 
-// .select-program__button {
-
-// }
-
 @media (min-width: @tablet-width) {
-
-
   .select-program {
     min-height: 850px;
-
-    &::before {
-      content: none;
-    }
-
     background-image: url(../img/index-can-tablet@1x.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
 
-
+    &::before {
+      content: none;
+    }
   }
 
   .select-program__wrapper {
@@ -82,7 +71,6 @@
 
     background-color: @white;
     background-image: none;
-
   }
 
   .select-program__container {
@@ -131,7 +119,4 @@
       background-repeat: no-repeat;
     }
   }
-
-
-
 }

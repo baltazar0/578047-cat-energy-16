@@ -1,5 +1,9 @@
 .basic-product {
   border-bottom: 1px solid #e6e6e6;
+
+  &:first-child {
+    border-top: 1px solid #e6e6e6;
+  }
 }
 
 .basic-product__wrapper {
@@ -12,7 +16,6 @@
 
   &--more {
     flex-direction: column;
-
   }
 }
 
@@ -71,7 +74,6 @@
 }
 
 @media (min-width: @tablet-width) {
-
   .basic-product {
     width: 324px;
     // min-height: 432px;
@@ -132,7 +134,6 @@
     &--more {
       width: 160px;
     }
-
   }
 
   .basic-product__title span {
@@ -149,7 +150,6 @@
       padding-bottom: 5px;
       border-bottom: 1px solid @bgc-underline;
     }
-
 
     &--more {
       width: 180px;
@@ -169,7 +169,6 @@
 
 
 @media (min-width: @desktop-width) {
-
   .basic-product {
     width: 245px;
 
@@ -193,7 +192,6 @@
   }
 
   .basic-product__text {
-
     .font-text(16px, 16px);
 
     &--column {
@@ -201,7 +199,6 @@
       padding-bottom: 5px;
       border-bottom: 1px solid @bgc-underline;
     }
-
 
     &--more {
       width: 180px;
