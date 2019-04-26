@@ -12,6 +12,7 @@
 }
 
 .main-nav__link {
+  position: relative;
   display: block;
   padding: 20px;
   font-family: inherit;
@@ -19,21 +20,50 @@
   color: inherit;
   .font-text(20px, 20px);
   font-weight: 500;
+
+  // &--current::before {
+  //   position: absolute;
+  //   content: "";
+  //   bottom: 11px;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 3px;
+  //   background-color: @white;
+
+  // }
+
+  // &--current-inner::before   {
+  //   position: absolute;
+  //   content: "";
+  //   bottom: 11px;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 3px;
+  //   background-color: @bgc-btn;
+  // }
+
+  &:not(&--current):hover {
+    opacity: 0.6;
+  }
+
+  &:not(&--current):active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: -57px;
-  right: 30px;
+  top: -50px;
+  right: 50%;
+  margin-right: -142px;
   padding: 0;
 
   display: block;
   width: 30px;
   height: 30px;
 
-  background-color: red;
-
   font-size: 0;
+  background-color: @white;
   border: 0;
 
   cursor: pointer;
@@ -43,7 +73,7 @@
   content: "";
 
   position: absolute;
-  top: 15px;
+  top: 7px;
   left: 2px;
 
   width: 25px;
@@ -54,6 +84,7 @@
 }
 
 .main-nav--opened .main-nav__toggle {
+
   &::before,
   &::after {
     content: "";
@@ -79,13 +110,14 @@
 
 @media (max-width: @mobile-width-only) {
   .main-nav--opened .main-nav__list {
-    position: absolute;
-    width: 320px;
-    top: 0;
-    right: 0;
-    z-index: 10;
+    margin: 0 auto;
+    // position: absolute;
+    // width: 320px;
+    // top: 0;
+    // right: 0;
+    // z-index: 10;
 
-    background-color: @white;
+    // background-color: @white;
   }
 
   .main-nav--closed .main-nav__list {
@@ -115,14 +147,24 @@
     border-bottom: none;
 
     &:not(:nth-child(3)) {
-      margin-right: 30px;
+      margin-right: 35px;
     }
   }
 
   .main-nav__link {
-    padding: 20px 0;
+    padding: 42px 0 20px;
     .font-text(18px, 25px);
     font-weight: 400;
+
+    &--current::before {
+      position: absolute;
+      content: "";
+      bottom: 11px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: @bgc-btn;
+    }
   }
 }
 
@@ -142,5 +184,16 @@
     &--inner {
       color: @base-color;
     }
+
+    &--current-index::before {
+      position: absolute;
+      content: "";
+      bottom: 11px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: @white;
+    }
+
   }
 }

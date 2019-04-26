@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   .container-min();
-  padding-top: 25px;
+  padding-top: 28px;
   padding-bottom: 25px;
 }
 
@@ -24,18 +24,21 @@
 
 .cooperate__map-wrapper {
   position: relative;
+  height: 364px;
+  overflow: hidden;
 
   &::before {
     position: absolute;
     content: "";
     width: 124px;
     height: 106px;
-    top: 200px;
+    top: 114px;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -63px;
     background-image: url(../img/map-pin.png);
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: center;
+    background-size: 60px;
   }
 }
 
@@ -44,6 +47,7 @@
   margin: 0 auto;
   width: 320px;
   height: 400px;
+  margin-top: -36px;
 }
 
 @media (min-width: @tablet-width) {

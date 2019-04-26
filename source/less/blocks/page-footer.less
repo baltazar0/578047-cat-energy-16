@@ -8,10 +8,22 @@
 
 .page-footer__logo {
   display: block;
-  padding-top: 35px;
-  padding-bottom: 30px;
+  padding-top: 38px;
+  padding-bottom: 26px;
   text-align: center;
   border-bottom: 1px solid @bgc-underline;
+
+  &--static {
+    cursor: default;
+  }
+
+  &:not(&--static):hover {
+    opacity: 0.8;
+  }
+
+  &:not(&--static):active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer___logo-image {
