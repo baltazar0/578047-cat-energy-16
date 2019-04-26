@@ -1,6 +1,5 @@
 .slider__image-wrapper {
-  .container-min();
-  margin-bottom: 30px;
+   margin-bottom: 32px;
 }
 
 .slider__image {
@@ -33,7 +32,7 @@
 .slider__scale {
   width: 85px;
   height: 14px;
-  margin: 0 15px;
+  margin: 2px 15px 0;
   padding: 3px;
   border: 1px solid #cfcfcf;
   border-radius: 6px;
@@ -41,7 +40,7 @@
 }
 
 .slider__bar {
-  width: 40%;
+  width: 49%;
   height: 6px;
   background-color: @bgc-btn;
   border-radius: 6px;
@@ -90,6 +89,19 @@
     .font-text(20px, 20px);
 
     border-bottom: 1px dotted #bebebe;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      border-bottom-style: solid;
+      // outline: none;
+    }
+
+    &:active {
+      border-bottom: 1px solid transparent;
+      // outline: none;
+    }
+
   }
 
   .slider__scale {
@@ -111,8 +123,20 @@
     background-color: @bgc-btn;
     border: 12px solid #ffffff;
     border-radius: 50%;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15),
+    0 0 1px 1px @bgc-underline;
     cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25),
+      0 0 1px 1px @bgc-underline;
+    }
+
+    &:active {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.30),
+      0 0 2px 2px @bgc-btn;
+      border: 11px solid #ffffff;
+    }
   }
 
   .slider__bar {

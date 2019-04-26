@@ -19,10 +19,20 @@
 }
 
 .copyright__logo svg {
-  width: 60px;
-  height: 60px;
-  fill: #2e368f;
+  width: 27px;
+  height: auto;
+  fill: #666666;
 }
+
+.copyright__logo:hover path {
+  fill: rgba(104, 183, 56, 1.0);
+}
+
+
+.copyright__logo:active path {
+  fill: rgba(104, 183, 56, 0.3);
+}
+
 
 @media (min-width: @tablet-width) {
   .copyright {
@@ -32,7 +42,6 @@
 
   .copyright__logo svg {
     width: 27px;
-    height: 34px;
-    fill: #2e368f;
+    height: auto;
   }
 }
