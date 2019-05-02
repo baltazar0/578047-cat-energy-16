@@ -8,7 +8,7 @@
 
 .page-footer__logo {
   display: block;
-  padding-top: 38px;
+  padding-top: 39px;
   padding-bottom: 26px;
   text-align: center;
   border-bottom: 1px solid @bgc-underline;
@@ -40,19 +40,24 @@
       align-items: center;
 
       .container-tablet();
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 47px;
+      padding-bottom: 43px;
     }
   }
 
   .page-footer__logo {
     padding: 0;
+    margin-right: 19px;
     width: 135px;
     border-bottom: none;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .page-footer {
+    position: relative;
+  }
+
   .page-footer__bottom-block {
     &--wrapper {
       .container-desktop();

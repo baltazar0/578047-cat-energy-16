@@ -40,25 +40,30 @@
   }
 
   &--leaf::before {
-    background-image: url(../img/advantage-leaf@1x.png);
+    background-image: url("../img/advantage-leaf@1x.png");
   }
 
   &--powder::before {
-    background-image: url(../img/advantage-powder@1x.png);
+    background-image: url("../img/advantage-powder@1x.png");
   }
 
   &--dining::before {
-    background-image: url(../img/advantage-dining@1x.png);
+    background-image: url("../img/advantage-dining@1x.png");
   }
 
   &--clock::before {
-    background-image: url(../img/advantage-clock@1x.png);
+    background-image: url("../img/advantage-clock@1x.png");
   }
 }
 
 
 @media (min-width: @tablet-width) {
+  .features {
+    padding-bottom: 16px;
+  }
+
   .features__title {
+    margin-bottom: 26px;
     .font-text(60px, 60px);
   }
 
@@ -68,31 +73,42 @@
   }
 
   .features__item {
-    width: 294px;
-    padding: 115px 80px 130px 0;
+    width: 325px;
+    margin-bottom: 35px;
+    margin-top: 49px;
+    padding: 109px 80px 51px 0;
     .font-text(16px, 24px);
     box-sizing: border-box;
     background-position: 120px 0;
     background-repeat: no-repeat;
 
     &:not(:nth-child(2n)) {
-      margin-right: 16%;
+      margin-right: 58px;
+    }
+
+    &::before {
+      content: "";
+      width: 80px;
+      height: 80px;
+      top: -3px;
+      left: 0;
+      background-position: 17px 15px;
     }
 
     &--leaf {
-      background-image: url(../img/1.png);
+      background-image: url("../img/1.png");
     }
 
     &--powder {
-      background-image: url(../img/2.png);
+      background-image: url("../img/2.png");
     }
 
     &--dining {
-      background-image: url(../img/3.png);
+      background-image: url("../img/3.png");
     }
 
     &--clock {
-      background-image: url(../img/4.png);
+      background-image: url("../img/4.png");
     }
   }
 }
@@ -100,7 +116,8 @@
 @media (min-width: @desktop-width) {
   .features__item {
     width: 245px;
-    padding: 115px 0 115px 0;
+    padding: 110px 0 55px 0;
+    margin-bottom: 12px;
 
     &:not(:nth-child(4n)) {
       margin-right: 80px;
