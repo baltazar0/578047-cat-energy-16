@@ -36,22 +36,21 @@
     content: "";
     width: 75px;
     height: 70px;
-
     background-repeat: no-repeat;
-    background-position: center
+    background-position: center;
   }
 
   &--slim::after {
     top: -18px;
     left: -12px;
-    background-image: url(../../img/icon-cat-slim.svg);
+    background-image: url("../img/icon-cat-slim.svg");
     background-size: 36px auto;
   }
 
   &--pro::after {
     top: -16px;
     left: -12px;
-    background-image: url(../../img/icon-cat-pro.svg);
+    background-image: url("../img/icon-cat-pro.svg");
     background-size: 68px auto;
   }
 }
@@ -63,10 +62,13 @@
   .font-text(14px, 18px);
   color: @text-color;
   text-transform: none;
+
+  br {
+    display: none;
+  }
 }
 
 .select-catalog__button {
-
   padding: 20px 0 21px;
 
   background-color: transparent;
@@ -83,11 +85,9 @@
     color: rgba(17, 17, 17, 0.3);
     background-color: transparent;
   }
-
 }
 
 .select-catalog__arrow {
-  // position: relative;
   display: inline-block;
   width: 40px;
   height: 15px;
@@ -95,37 +95,78 @@
   vertical-align: bottom;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url(../img/icon-right-arrow-long.svg);
+  background-image: url("../img/icon-right-arrow-long.svg");
   background-size: 27px auto;
-
 }
 
-.select-catalog__button:hover .select-catalog__arrow  {
-  background-image: url(../img/icon-right-arrow-verylong.svg);
+.select-catalog__button:hover .select-catalog__arrow {
+  background-image: url("../img/icon-right-arrow-verylong.svg");
   background-size: 35px auto;
 }
 
-.select-catalog__button:active .select-catalog__arrow  {
-  background-image: url(../img/icon-right-arrow-verylong.svg);
+.select-catalog__button:active .select-catalog__arrow {
+  background-image: url("../img/icon-right-arrow-verylong.svg");
   background-size: 35px auto;
   opacity: 0.3;
 }
 
 
 @media (min-width: @tablet-width) {
+  .select-catalog {
+    margin-bottom: 28px;
+  }
+
   .select-catalog__item {
-    padding: 80px 40px 40px;
-    margin-bottom: 30px;
+    padding: 76px 53px 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   .select-catalog__title {
     padding-left: 0;
+    margin-bottom: 25px;
     .font-text(36px, 37px);
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 16px;
+      left: 393px;
+    }
+
+    &::after {
+      height: 200px;
+    }
+
+    &--slim::after {
+      width: 200px;
+      top: 0;
+      left: 393px;
+      background-size: 142px auto;
+    }
+
+    &--pro::after {
+      width: 300px;
+      top: 15px;
+      left: 342px;
+      background-size: 271px auto;
+    }
   }
 
   .select-catalog__text {
     width: 375px;
+    margin-bottom: 37px;
     .font-text(16px, 24px);
+
+    br {
+      display: inline;
+    }
+  }
+
+  .select-catalog__arrow {
+    margin-left: 22px;
   }
 
   .select-catalog__button {
@@ -134,8 +175,11 @@
   }
 }
 
-
 @media (min-width: @desktop-width) {
+  .select-catalog {
+    margin-bottom: 56px;
+  }
+
   .select-catalog__list {
     display: flex;
     flex-wrap: wrap;
@@ -145,21 +189,57 @@
     display: flex;
     flex-direction: column;
     width: 570px;
-    padding: 75px 50px 50px;
-    margin-bottom: 30px;
+    min-height: 370px;
+    padding: 75px 50px 62px;
     box-sizing: border-box;
 
     &:not(:nth-child(2n)) {
       margin-right: 80px;
+      margin-bottom: 0;
+    }
+  }
+
+  .select-catalog__title {
+    padding-left: 165px;
+    margin-bottom: 75px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: -28px;
+      left: 3px;
+    }
+
+    &::after {
+      height: 100px;
+    }
+
+    &--slim::after {
+      width: 100px;
+      top: -37px;
+      left: 2px;
+      background-size: 70px auto;
+    }
+
+    &--pro::after {
+      width: 150px;
+      top: -29px;
+      left: -22px;
+      background-size: 131px auto;
     }
   }
 
   .select-catalog__text {
     width: 100%;
-    .font-text(16px, 24px);
+    margin-bottom: 31px;
+
+    br {
+      display: none;
+    }
   }
 
   .select-catalog__button {
     margin-top: auto;
+    padding: 0;
   }
 }

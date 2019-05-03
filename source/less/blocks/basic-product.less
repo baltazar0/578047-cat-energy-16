@@ -1,21 +1,46 @@
 .basic-product {
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid @bgc-underline;
 
   &:first-child {
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid @bgc-underline;
   }
 }
 
 .basic-product__wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  // align-items: center;
   .container-min();
-  padding-top: 40px;
-  padding-bottom: 25px;
+  // padding-top: 40px;
+  padding-bottom: 24px;
 
   &--more {
+    position: relative;
     flex-direction: column;
+    padding-top: 80px;
+  }
+
+  &--more::before,
+  &--more::after {
+    position: absolute;
+    content: "";
+    background-color: @bgc-underline;
+  }
+
+  &--more::before {
+    width: 30px;
+    height: 2px;
+    top: 40px;
+    left: 50%;
+    margin-left: -15px;
+  }
+
+  &--more::after {
+    width: 2px;
+    height: 30px;
+    top: 26px;
+    left: 50%;
+    margin-left: -1px;
   }
 }
 
@@ -23,8 +48,15 @@
   width: 140px;
 }
 
+.basic-product__image {
+  display: block;
+  width: 140px;
+  // height: 144px;
+}
+
 .basic-product__table {
   width: 140px;
+  margin-top: 22px;
   margin-left: auto;
   border-collapse: collapse;
   border-spacing: 0;
@@ -32,15 +64,15 @@
 
 .basic-product__title {
   width: 80px;
-  margin-bottom: 15px;
+  margin-bottom: 9px;
   .font-text(16px, 20px);
   text-align: left;
 
   &--more {
     position: relative;
     width: 280px;
-    margin-top: 40px;
-    margin-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 7px;
     text-align: center;
   }
 }
@@ -59,18 +91,21 @@
   &--more {
     width: 280px;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: center;
   }
 }
 
 .basic-product__button {
   width: 100%;
+  .font-text(16px, 20px);
+  padding-bottom: 8px;
 
   &--more {
     background-color: @bgc-block;
     color: #444444;
   }
+
   &--more:hover {
     background-color: @bgc-block-hover;
   }
@@ -85,11 +120,18 @@
   .basic-product {
     width: 324px;
     // min-height: 432px;
-    margin-bottom: 140px;
+    margin-top: 139px;
+    // margin-bottom: 139px;
     border-bottom: none;
 
     &:not(:nth-child(2n)) {
       margin-right: 60px;
+      border-top: none;
+    }
+
+    &--more {
+      border: 1px solid @bgc-underline;
+      box-sizing: border-box;
     }
   }
 
@@ -99,7 +141,7 @@
     min-height: 432px;
     flex-direction: column;
     margin: 0;
-    padding: 160px 37px 40px;
+    padding: 140px 37px 41px;
     background-color: @bgc-block;
 
     box-sizing: border-box;
@@ -109,7 +151,25 @@
     }
 
     &--more {
+      align-items: center;
+      padding: 164px 34px 40px;
       background-color: @white;
+    }
+
+    &--more::before {
+      width: 60px;
+      height: 2px;
+      top: 83px;
+      left: 50%;
+      margin-left: -30px;
+    }
+
+    &--more::after {
+      width: 2px;
+      height: 60px;
+      top: 54px;
+      left: 50%;
+      // margin-left: -1px;
     }
   }
 
@@ -118,13 +178,27 @@
     position: absolute;
     left: 50%;
     margin-left: -162px;
-    top: -80px;
+
+    &--small {
+      top: -47px;
+    }
+
+    &--big {
+      top: -82px;
+    }
   }
 
   .basic-product__image {
     width: 324px;
-    height: 208px;
     background-color: transparent;
+
+    &--small {
+      height: 174px;
+    }
+
+    &--big {
+      height: 208px;
+    }
   }
 
   .basic-product__table {
@@ -134,13 +208,14 @@
 
   .basic-product__title {
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 
     .font-text(20px, 20px);
     text-align: center;
 
     &--more {
       width: 160px;
+      margin-bottom: 28px;
     }
   }
 
@@ -154,8 +229,8 @@
     .font-text(16px, 16px);
 
     &--column {
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding-top: 7px;
+      padding-bottom: 7px;
       border-bottom: 1px solid @bgc-underline;
     }
 
@@ -167,6 +242,8 @@
   .basic-product__button {
     width: 250px;
     margin-top: auto;
+    padding-top: 9px;
+    padding-bottom: 11px;
 
     &--more {
       background-color: @bgc-block;
@@ -175,10 +252,10 @@
   }
 }
 
-
 @media (min-width: @desktop-width) {
   .basic-product {
     width: 245px;
+    margin-top: 140px;
 
     &:not(:nth-child(4n)) {
       margin-right: 80px;
@@ -203,8 +280,8 @@
     .font-text(16px, 16px);
 
     &--column {
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding-top: 7px;
+      padding-bottom: 7px;
       border-bottom: 1px solid @bgc-underline;
     }
 
