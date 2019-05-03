@@ -9,12 +9,11 @@
   .font-text(16px, 18px);
 
   &--data {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom: 1px solid @bgc-underline;
   }
 
   &--purpose {
-    padding-bottom: 20px;
     border-bottom: 1px solid @bgc-underline;
   }
 }
@@ -30,13 +29,13 @@
 
 .questionnaire__form-text {
   margin-top: 0;
-  margin-bottom: 60px;
+  margin-bottom: 39px;
   .font-text(14px, 18px);
   font-weight: 400;
 }
 
 .questionnaire__input {
-  min-height: 52px;
+  min-height: 45px;
   padding: 12px;
   flex-grow: 1;
   font-family: inherit;
@@ -48,10 +47,14 @@
   box-sizing: border-box;
   outline: none;
 
+  &--contact {
+    padding-right: 40px;
+  }
+
   &--textarea {
     width: 280px;
     height: 150px;
-    padding: 10px;
+    padding: 13px;
   }
 
   &:hover {
@@ -61,6 +64,11 @@
   &:active,
   &:focus {
     border-color: @text-color;
+  }
+
+  &:active + .questionnaire__icon,
+  &:focus + .questionnaire__icon {
+    fill: @bgc-btn;
   }
 }
 
@@ -72,7 +80,7 @@
 
 .questionnaire__data-item {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .questionnaire__label--data {
@@ -86,12 +94,11 @@
   display: flex;
   flex-direction: column;
   padding-top: 25px;
-  margin-bottom: 10px;
 }
 
 .questionnaire__purpose-item {
   padding-left: 45px;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
 
   &:active {
     opacity: 0.3;
@@ -107,7 +114,7 @@
 .questionnaire__input--purpose + label::before {
   position: absolute;
   content: "";
-  left: -43px;
+  left: -45px;
   top: 50%;
   transform: translateY(-50%);
   width: 26px;
@@ -120,13 +127,12 @@
 .questionnaire__input--purpose:checked + label::after {
   position: absolute;
   content: "";
-  left: -35px;
+  left: -37px;
   top: 50%;
   transform: translateY(-50%);
   width: 12px;
   height: 12px;
   border-radius: 50%;
-
   background-color: @bgc-btn;
 }
 
@@ -138,27 +144,48 @@
 }
 
 .questionnaire__contact-item {
+  position: relative;
   display: flex;
-  margin-bottom: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 .questionnaire__label--contact {
   width: auto;
   align-self: center;
-  margin-right: 15px;
+  margin-right: 10px;
+}
+
+.questionnaire__icon {
+  position: absolute;
+  fill: #222222;
+
+  &--mail {
+    width: 20px;
+    top: 16px;
+    right: 15px;
+  }
+
+  &--phone {
+    width: 21px;
+    top: 13px;
+    right: 15px;
+  }
 }
 
 .questionnaire__additionally-list {
   .reset-list();
   display: flex;
   flex-direction: column;
-  padding-top: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 }
 
 .questionnaire__additionally-item {
   padding-left: 45px;
-  margin-bottom: 28px;
+  margin-top: 5px;
+  margin-bottom: 20px;
 
   &:active {
     opacity: 0.3;
@@ -204,6 +231,7 @@
 
 .questionnaire__button {
   width: 100%;
+  .font-text(16px, 20px);
   font-family: inherit;
   text-transform: uppercase;
   border: none;
@@ -211,6 +239,8 @@
 
 .questionnaire__remark {
   width: auto;
+  margin-top: 20px;
+  margin-bottom: 31px;
   color: @text-color;
   .font-text(14px, 16px);
   font-family: @font-family-text;
@@ -232,7 +262,7 @@
     .font-text(20px, 20px);
 
     &--data {
-      padding-bottom: 75px;
+      padding-bottom: 54px;
       border-bottom: none;
     }
 
@@ -240,34 +270,55 @@
       padding-bottom: 20px;
       border-bottom: none;
     }
+
+    &--contact {
+      padding-bottom: 30px;
+    }
+
+    &--textarea {
+      padding-bottom: 30px;
+    }
   }
 
   .questionnaire__form-text {
     padding: 0 40px;
+    margin-bottom: 70px;
+    height: 54px;
     .font-text(20px, 30px);
   }
 
   .questionnaire__input {
+    height: 54px;
+    padding-left: 19px;
+    padding-bottom: 15px;
     .font-text(20px, 20px);
 
     &--textarea {
       width: 630px;
       height: 175px;
-      padding: 15px;
+      padding: 10px 17px;
       margin: 0 40px;
       .font-text(20px, 30px);
     }
+  }
+
+  .questionnaire__data-purpose {
+    margin-bottom: 15px;
   }
 
   .questionnaire__data-list {
     padding: 0 40px;
   }
 
+  .questionnaire__data-item {
+    margin-bottom: 18px;
+  }
+
   .questionnaire__purpose-list {
     .reset-list();
     display: flex;
     flex-direction: column;
-    padding-top: 25px;
+    padding-top: 34px;
     margin: 0 40px;
     margin-bottom: 10px;
     border: 1px solid @bgc-underline;
@@ -275,18 +326,18 @@
   }
 
   .questionnaire__purpose-item {
-    padding-left: 90px;
-    margin-bottom: 32px;
+    padding-left: 86px;
+    margin-bottom: 33px;
   }
 
   .questionnaire__input--purpose + label::before {
-    left: -50px;
-    width: 40px;
-    height: 40px;
+    left: -60px;
+    width: 38px;
+    height: 38px;
   }
 
   .questionnaire__input--purpose:checked + label::after {
-    left: -38px;
+    left: -48px;
     width: 18px;
     height: 18px;
   }
@@ -295,27 +346,32 @@
     padding: 0 40px;
   }
 
-  .questionnaire__contact-item {
-    margin-bottom: 15px;
+  .questionnaire__contact-item:not(:last-child) {
+    margin-bottom: 17px;
   }
 
   .questionnaire__label--contact {
     width: auto;
     align-self: center;
-    margin-right: 15px;
+    margin-right: 19px;
+
+    &--phone {
+      margin-right: 16px;
+    }
   }
 
   .questionnaire__additionally-list {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 40px;
+    padding: 0;
     margin-bottom: 40px;
   }
 
   .questionnaire__additionally-item {
     width: 284px;
-    padding-left: 45px;
-    margin-bottom: 28px;
+    padding-left: 97px;
+    margin-top: 38px;
+    margin-bottom: 15px;
     box-sizing: border-box;
 
     &:not(:nth-child(2n)) {
@@ -336,6 +392,7 @@
   .questionnaire__send {
     display: flex;
     flex-direction: row;
+    margin-bottom: 64px;
     padding: 0 40px;
     box-sizing: border-box;
   }
@@ -343,10 +400,13 @@
   .questionnaire__button {
     width: 284px;
     margin-right: 60px;
+    .font-text(20px, 20px);
   }
 
   .questionnaire__remark {
     width: 284px;
+    margin-top: 24px;
+    margin-bottom: 28px;
     .font-text(16px, 16px);
   }
 }
@@ -354,6 +414,12 @@
 @media (min-width: @desktop-width) {
   .questionnaire__container {
     .container-desktop();
+
+    &--not-desktop {
+      width: auto;
+      margin: 0;
+      padding: 0;
+    }
   }
 
   .questionnaire__form-text {
@@ -361,22 +427,39 @@
   }
 
   .questionnaire__data-purpose {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    .container-desktop();
+    margin-bottom: 20px;
+  }
+
+  .questionnaire__fieldset-wrapper {
+    &--data {
+      width: 570px;
+    }
+
+    &--purpose {
+      width: 570px;
+    }
+  }
+
+  .questionnaire__fieldset {
+    &--contact {
+      padding-bottom: 15px;
+    }
+
+    &--textarea {
+      padding-bottom: 34px;
+    }
   }
 
   .questionnaire__data-list {
-    width: 570px;
     padding: 0;
   }
 
   .questionnaire__purpose-list {
-    position: absolute;
-    width: 570px;
     margin: 0;
-    top: 0;
-    right: 80px;
   }
-
 
   .questionnaire__contact-list {
     padding: 0;
@@ -411,14 +494,14 @@
     &--textarea {
       width: 1220px;
       height: 175px;
-      padding: 15px;
+      padding: 10px 15px;
       margin: 0;
     }
   }
 
   .questionnaire__send {
     padding: 0;
-    margin-bottom: 80px;
+    margin-bottom: 73px;
   }
 
   .questionnaire__button {
