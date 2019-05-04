@@ -12,6 +12,10 @@
   .font-text(16px, 16px);
   color: @text-color;
   text-transform: none;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__logo {
@@ -25,12 +29,12 @@
   fill: #666666;
 }
 
-.copyright__logo:hover path {
+.copyright__logo:hover svg {
   fill: rgba(104, 183, 56, 1);
 }
 
 
-.copyright__logo:active path {
+.copyright__logo:active svg {
   fill: rgba(104, 183, 56, 0.3);
 }
 
