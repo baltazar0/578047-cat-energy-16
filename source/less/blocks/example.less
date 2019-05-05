@@ -44,6 +44,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   border: 1px solid #cfcfcf;
   border-radius: 3px;
 
@@ -58,7 +59,7 @@
   width: 125px;
 
   .font-text(24px, 24px);
-  text-align: center;
+  // text-align: center;
 }
 
 .example__label {
@@ -72,9 +73,15 @@
   .font-text(12px, 12px);
   color: @text-color;
   text-transform: none;
-  text-align: center;
-
   background-color: @bgc-block;
+
+  &--weight {
+    left: 17px;
+  }
+
+  &--time {
+    left: 16px;
+  }
 }
 
 .example__cost {
@@ -87,7 +94,6 @@
   .example {
     padding-top: 43px;
     padding-bottom: 0;
-    // margin-bottom: 25px;
     background-color: @white;
     border-top: 1px solid @bgc-underline;
   }
@@ -131,12 +137,19 @@
 
   .example__label {
     width: auto;
-
     padding: 6px;
     bottom: -12px;
     .font-text(14px, 14px);
 
     background-color: @white;
+
+    &--weight {
+      left: 26px;
+    }
+
+    &--time {
+      left: 10px;
+    }
   }
 
   .example__cost {

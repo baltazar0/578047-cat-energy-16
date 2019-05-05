@@ -1,5 +1,26 @@
 .page-main__container {
+  position: relative;
   .container-min();
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 305px;
+
+    top: -354px;
+    left: 50%;
+    margin-left: -160px;
+    background-image: url("../img/index-can-mobile@1x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 280px auto;
+
+    @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-can-mobile@2x.png");
+    }
+  }
 }
 
 .page-main__inner-title {
@@ -39,7 +60,6 @@
 
 .page-main__inner-h2 {
   margin: 0;
-  // padding-bottom: 30px;
   padding-right: 20px;
   .font-text(24px, 24px);
   font-weight: 400;
@@ -51,6 +71,10 @@
 @media (min-width: @tablet-width) {
   .page-main__container {
     .container-tablet();
+
+    &::before {
+      content: none;
+    }
   }
 
   .page-main__inner-wrapper {
@@ -70,14 +94,8 @@
   }
 
   .page-main__inner-h2-wrapper {
-    // position: relative;
-
     &::before {
-      // position: absolute;
-      // content: "";
       width: 100%;
-      // height: 3px;
-      // background-color: @bgc-btn;
       top: 51px;
       left: 0;
     }
@@ -111,14 +129,29 @@
   .page-main__container {
     position: relative;
     .container-desktop();
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 552px;
+      height: 499px;
+      top: -645px;
+      left: 50%;
+      margin-left: -164px;
+      background-image: url("../img/index-can-desktop@1x.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 552px auto;
+
+      @media (min-resolution: @retina-dpi),
+        (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-can-desktop@2x.png");
+      }
+    }
   }
 
   .page-main__inner-wrapper {
     margin-bottom: 58px;
-
-    // &--form {
-    //   margin-bottom: 40px;
-    // }
   }
 
   .page-main__inner-title {
@@ -126,21 +159,12 @@
   }
 
   .page-main__inner-h2-wrapper {
-    // position: relative;
-
     &::before {
-      // position: absolute;
-      // content: "";
-      // width: 100%;
-      // height: 3px;
-      // background-color: @bgc-btn;
       top: 52px;
-      // left: 0;
     }
   }
 
   .page-main__title-wrapper {
-    // display: flex;
     justify-content: flex-start;
     width: 1300px;
     padding: 0;
