@@ -1,26 +1,6 @@
 .select-program {
   position: relative;
   margin-bottom: 22px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 320px;
-    height: 305px;
-
-    bottom: 24px;
-    left: 50%;
-    margin-left: -160px;
-    background-image: url("../img/index-can-mobile@1x.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 280px auto;
-
-    @media (min-resolution: @retina-dpi),
-      (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-can-mobile@2x.png");
-    }
-  }
 }
 
 .select-program__wrapper {
@@ -35,8 +15,7 @@
   background-position: center;
   background-size: cover;
 
-  @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/index-background-mobile@2x.jpg");
   }
 }
@@ -71,13 +50,8 @@
     background-repeat: no-repeat;
     background-size: 709px auto;
 
-    @media (min-resolution: @retina-dpi),
-      (min-resolution: @retina-dppx) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-can-tablet@2x.jpg");
-    }
-
-    &::before {
-      content: none;
     }
   }
 
@@ -117,39 +91,36 @@
 
 @media (min-width: @desktop-width) {
   .select-program {
-    position: absolute;
-    width: 570px;
-    top: -630px;
-    left: 50%;
-    margin-left: -600px;
-    padding-top: 80px;
-
+    position: relative;
+    min-height: 0;
+    margin-bottom: 5px;
+    padding-top: 47px;
     background-image: none;
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 552px;
-      height: 499px;
-
-      top: 0;
-      left: 106%;
-      background-image: url("../img/index-can-desktop@1x.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 552px auto;
-
-      @media (min-resolution: @retina-dpi),
-        (min-resolution: @retina-dppx) {
-        background-image: url("../img/index-can-desktop@2x.png");
-      }
-    }
+  .select-program__wrapper {
+    margin-bottom: 35px;
   }
 
   .select-program__container {
     margin: 0;
     padding: 0;
-    width: auto;
+    // width: auto;
+    position: absolute;
+    min-height: 0;
+    width: 570px;
+
+    left: 50%;
+    margin-left: -600px;
+    padding-top: 80px;
+
+    &--content {
+      top: -552px;
+    }
+
+    &--button {
+      top: -318px;
+    }
   }
 
   .select-program__title {
