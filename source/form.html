@@ -4,8 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
@@ -77,7 +79,7 @@
         </div>
         <div class="questionnaire__fieldset-wrapper questionnaire__fieldset-wrapper--purpose">
           <fieldset class="questionnaire__fieldset questionnaire__fieldset--purpose">
-            <div class="questionnaire__container ">
+            <div class="questionnaire__container questionnaire__container--not-desktop ">
               <ul class="questionnaire__purpose-list">
                 <li class="questionnaire__purpose-item">
                   <input class="questionnaire__input questionnaire__input--purpose visually-hidden" type="radio"
@@ -178,7 +180,7 @@
       </div>
     </form>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer page-footer--inner">
     <div class="cooperate__text-wrapper">
       <h2 class="cooperate__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
       <p class="cooperate__contact">ул. Большая Конюшенная, д. 19/8
